@@ -5,6 +5,11 @@ namespace CommandAPI.Data
 {
     public class SqlCommandAPIRepo : ICommandAPIRepo
     {
+        private readonly CommandContext _context;
+        public SqlCommandAPIRepo(CommandContext context)
+        {
+            _context = context;
+        }
         public void CreateCommand(Command cmd)
         {
             throw new System.NotImplementedException();
