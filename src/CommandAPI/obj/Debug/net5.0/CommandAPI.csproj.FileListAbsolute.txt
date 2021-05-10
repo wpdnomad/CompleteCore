@@ -21,3 +21,13 @@ D:\Repos\Azure\CommandAPISolution\src\commandapi\obj\Debug\net5.0\CommandAPI.dll
 D:\Repos\Azure\CommandAPISolution\src\commandapi\obj\Debug\net5.0\ref\CommandAPI.dll
 D:\Repos\Azure\CommandAPISolution\src\commandapi\obj\Debug\net5.0\CommandAPI.pdb
 D:\Repos\Azure\CommandAPISolution\src\commandapi\obj\Debug\net5.0\CommandAPI.genruntimeconfig.cache
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Humanizer.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Npgsql.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\Repos\Azure\CommandAPISolution\src\commandapi\obj\Debug\net5.0\CommandAPI.csproj.CopyComplete
