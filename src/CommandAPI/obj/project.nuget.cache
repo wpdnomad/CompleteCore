@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cu1jWL7Wdd+H3BvFt17/xRSf4S4NHGP1EjXfUqDUgqJ4XZYiyB0v6rUg3q6vqyT4bYitD1asVrx8TUmXi28fJA==",
+  "dgSpecHash": "N/sRikHtkTMEAFOAEYltp4nLinx9BhCKFB2sWE8cJGHBWQ8OoClMz5t8Km+RJPYXhpDRgdgmxjpJlz835hFlfQ==",
   "success": true,
-  "projectFilePath": "D:\\Repos\\Azure\\CommandAPISolution\\src\\commandapi\\CommandAPI.csproj",
+  "projectFilePath": "D:\\Repos\\Azure\\CommandAPISolution\\src\\CommandAPI\\CommandAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wpdno\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\wpdno\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
