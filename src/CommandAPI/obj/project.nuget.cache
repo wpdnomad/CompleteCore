@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Od2TQr5ANKnRRY1GpHRQdW6y+rcKV4EOfzjx66d0lrRflYD1xJR9ZrC0YLhiroNVsjqeySh17WTv2f7klVKIPQ==",
+  "dgSpecHash": "Ed97UT5KoXu7PsWIYmc7Bp/pJWsKfEgU1v50yA43hVFXd7hmFPQNsDUR8YgLTP4ClKKHmHHLOUqZO0jVCQu4ug==",
   "success": true,
-  "projectFilePath": "D:\\Repos\\Azure\\CommandAPISolution\\src\\commandapi\\CommandAPI.csproj",
+  "projectFilePath": "D:\\Repos\\Azure\\CommandAPISolution\\src\\CommandAPI\\CommandAPI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
