@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using CommandAPI.Data;
-using CommandAPI.Models;
 using AutoMapper;
+using CommandAPI.Data;
 using CommandAPI.Dtos;
+using CommandAPI.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace CommandAPI.Controllers
 {
@@ -38,6 +38,17 @@ namespace CommandAPI.Controllers
                 return NotFound();
             }
             return Ok(_mapper.Map<CommandReadDto>(commandItem));
+        }
+
+        [HttpPost]
+        public ActionResult<CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+        {
+            var commandModel = _mapper.Map<Command>(commandCreateDto);
+            _repository.CreateCommand(commandModel);
+            _repository.SaveChanges();
+            var commandReadDto = _mapper.Map<CommandReadDto>(commandModel);
+            return CreatedAtRoute(nameof(GetCommandById),
+              new { Id = commandReadDto.Id }, commandReadDto);
         }
     }
 }
