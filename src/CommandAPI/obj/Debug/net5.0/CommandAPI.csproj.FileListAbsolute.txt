@@ -31,3 +31,5 @@ D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Npgsql.dll
 D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Repos\Azure\CommandAPISolution\src\commandapi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\Repos\Azure\CommandAPISolution\src\commandapi\obj\Debug\net5.0\CommandAPI.csproj.CopyComplete
+D:\Repos\Azure\CommandAPISolution\src\CommandAPI\bin\Debug\net5.0\AutoMapper.dll
+D:\Repos\Azure\CommandAPISolution\src\CommandAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
