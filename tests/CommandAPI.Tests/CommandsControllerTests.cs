@@ -154,6 +154,38 @@ namespace CommandAPI.Tests
             Assert.IsType<ActionResult<CommandReadDto>>(result);
         }
 
+        [Fact]
+        public void CreateCommand_Returns201Created_WhenValidObjectSubmitted()
+        {
+            //Arrange
+            mockRepo.Setup(repo =>
+              repo.GetCommandById(1)).Returns(new Command { Id = 1, HowTo = "mock", Platform = "Mock", CommandLine = "Mock" });
+
+            var controller = new CommandsController(mockRepo.Object, mapper);
+
+            //Act
+            var result = controller.CreateCommand(new CommandCreateDto { });
+
+            //Assert
+            Assert.IsType<CreatedAtRouteResult>(result.Result);
+        }
+
+        [Fact]
+        public void UpdateCommand_Returns204NoContent_WhenValidObjectSubmitted()
+        {
+            //Arrange
+            mockRepo.Setup(repo =>
+              repo.GetCommandById(1)).Returns(new Command { Id = 1, HowTo = "mock", Platform = "Mock", CommandLine = "Mock" });
+
+            var controller = new CommandsController(mockRepo.Object, mapper);
+
+            //Act
+            var result = controller.UpdateCommand(1, new CommandUpdateDto { });
+
+            //Assert
+            Assert.IsType<NoContentResult>(result);
+        }
+
         private List<Command> GetCommands(int num)
         {
             var commands = new List<Command>();
