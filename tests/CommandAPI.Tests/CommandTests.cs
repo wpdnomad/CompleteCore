@@ -37,5 +37,21 @@ namespace CommandAPI.Tests
             //Assert
             Assert.Equal("Azure", testCommand.Platform);
         }
+
+        [Fact]
+        public void CanChangeCommandLine()
+        {
+            //Arrange
+            var testCommand = new Command
+            {
+                HowTo = "Do something awesome",
+                Platform = "xUnit",
+                CommandLine = "dotnet test"
+            };
+            //Act
+            testCommand.CommandLine = "dotnet run";
+            //Assert
+            Assert.Equal("dotnet run", testCommand.CommandLine);
+        }
     }
 }
