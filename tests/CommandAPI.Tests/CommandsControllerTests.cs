@@ -121,6 +121,23 @@ namespace CommandAPI.Tests
             Assert.IsType<OkObjectResult>(result.Result);
         }
 
+        //TEST 2.3
+        [Fact]
+        public void GetCommandByID_ReturnsCorrectResouceType_WhenValidIDProvided()
+        {
+            //Arrange
+            mockRepo.Setup(repo =>
+              repo.GetCommandById(1)).Returns(new Command { Id = 1, HowTo = "mock", Platform = "Mock", CommandLine = "Mock" });
+
+            var controller = new CommandsController(mockRepo.Object, mapper);
+
+            //Act
+            var result = controller.GetCommandById(1);
+
+            //Assert
+            Assert.IsType<ActionResult<CommandReadDto>>(result);
+        }
+
         private List<Command> GetCommands(int num)
         {
             var commands = new List<Command>();
