@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CommandAPI.Controllers;
 using CommandAPI.Data;
+using CommandAPI.Dtos;
 using CommandAPI.Models;
 using CommandAPI.Profiles;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +46,20 @@ namespace CommandAPI.Tests
             var result = controller.GetAllCommands();
             //Assert
             Assert.IsType<OkObjectResult>(result.Result);
+        }
+
+        [Fact]
+        public void GetAllCommands_ReturnsOneItem_WhenDBHasOneResource()
+        {  //Arrange
+            mockRepo.Setup(repo =>
+             repo.GetAllCommands()).Returns(GetCommands(1));
+            var controller = new CommandsController(mockRepo.Object, mapper);
+            //Act
+            var result = controller.GetAllCommands();
+            //Assert
+            var okResult = result.Result as OkObjectResult;
+            var commands = okResult.Value as List<CommandReadDto>;
+            Assert.Single(commands);
         }
 
         private List<Command> GetCommands(int num)
