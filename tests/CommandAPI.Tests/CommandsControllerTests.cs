@@ -88,6 +88,19 @@ namespace CommandAPI.Tests
             Assert.IsType<ActionResult<IEnumerable<CommandReadDto>>>(result);
         }
 
+        [Fact]
+        public void GetCommandByID_Returns404NotFound_WhenNonExistentIDProvided()
+        {
+            //Arrange
+            mockRepo.Setup(repo =>
+                repo.GetCommandById(0)).Returns(() => null);
+            var controller = new CommandsController(mockRepo.Object, mapper);
+            //Act
+            var result = controller.GetCommandById(1);
+            //Assert
+            Assert.IsType<NotFoundResult>(result.Result);
+        }
+
         private List<Command> GetCommands(int num)
         {
             var commands = new List<Command>();
