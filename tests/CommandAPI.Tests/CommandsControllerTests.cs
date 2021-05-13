@@ -62,6 +62,19 @@ namespace CommandAPI.Tests
             Assert.Single(commands);
         }
 
+        [Fact]
+        public void GetAllCommands_Returns200OK_WhenDBHasOneResource()
+        {
+            //Arrange
+            mockRepo.Setup(repo =>
+              repo.GetAllCommands()).Returns(GetCommands(1));
+            var controller = new CommandsController(mockRepo.Object, mapper);
+            //Act
+            var result = controller.GetAllCommands();
+            //Assert
+            Assert.IsType<OkObjectResult>(result.Result);
+        }
+
         private List<Command> GetCommands(int num)
         {
             var commands = new List<Command>();
