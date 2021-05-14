@@ -245,8 +245,7 @@ namespace CommandAPI.Tests
             var result = controller.DeleteCommand(0);
 
             //Assert
-            //deliberately failing test for DevOp pipeline testing
-            Assert.IsType<OkResult>(result);
+            Assert.IsType<NotFoundResult>(result);
         }
 
         private List<Command> GetCommands(int num)
