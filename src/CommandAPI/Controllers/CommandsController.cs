@@ -5,6 +5,7 @@ using CommandAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CommandAPI.Controllers
 {
@@ -21,6 +22,7 @@ namespace CommandAPI.Controllers
             _mapper = mapper;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
         {
