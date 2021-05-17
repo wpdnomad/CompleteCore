@@ -22,7 +22,6 @@ namespace CommandAPI.Controllers
             _mapper = mapper;
         }
 
-        [Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
         {
@@ -31,7 +30,7 @@ namespace CommandAPI.Controllers
         }
 
         //GET api/commands/{id}
-        //[Authorize]       //Apply this attribute to lockdown this ActionResult (or others)
+        [Authorize]       //Apply this attribute to lockdown this ActionResult (or others)
         [HttpGet("{id}", Name = "GetCommandById")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
